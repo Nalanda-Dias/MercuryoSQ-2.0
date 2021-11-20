@@ -1,0 +1,13 @@
+body
+{
+	background-image: url(../imagens/home.jpg); /*Colocando a imagem do fundo da tela*/
+	background-repeat: no-repeat; /*Não repeti as imagens*/
+	background-size: 100% 800px; /*Tamanho da imagem*/
+	color: white; /*Cor da fonte*/
+}
+
+.display-4
+{
+	margin-top: 250px;
+}
+

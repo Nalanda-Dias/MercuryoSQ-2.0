@@ -1,0 +1,24 @@
+h1
+{
+    font-family: cursive;
+    text-align: center;
+}
+
+p
+{
+    text-align: center;
+}
+
+h3
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.Titulo
+{
+    text-align: center;
+    font-weight: bold;
+    margin-left: -60px;
+}
+
