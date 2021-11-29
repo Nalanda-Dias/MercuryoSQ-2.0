@@ -1,13 +1,11 @@
-var btnn = document.getElementById('btnn');
-btnn.addEventListener('click', function()
-{
-    let password = document.getElementById('UserPassword');
-    if(password.type == "password")
-    {
-        password.type = "text"
-        this.style.opacity = "1"
-    } else{
-        password.type = "password"
-        this.style.opacity ".4"
-    }
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
 });

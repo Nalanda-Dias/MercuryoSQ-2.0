@@ -1,0 +1,198 @@
+.parent-login
+{
+	background-color: #f7f7f7;
+	height: inherit;
+}
+
+.parent-login .box-login
+{
+	width: 300px; /*largura da caixa*/
+	margin-top: 80px; /*espaço entre o topo e a caixa*/
+	margin-left: 500px; /*espaço entre a esquerda e a caixa*/
+	position: absolute;
+	top: 10%;
+	left: 4%;
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+    background-color: white;
+    padding: 20px;
+}
+
+div
+{
+	display: block;
+}
+
+.parent-login .ls-login-logo
+{
+	background-image: url(../imagens/logo.png);
+	background-position-x:center;
+	background-position-x: center;
+    background-position-y: center;
+    background-size: 130px;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    text-indent: -9999px;
+    margin-bottom: 10px;
+}
+
+h1
+{
+	font-size: 36px;
+	margin-top: 20px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 1.1;
+	color: inherit;
+	margin: 0.67em 0;
+	display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    height: 90px;
+}
+
+form 
+{
+	display: block;
+	margin-top: 0em;
+}
+
+fieldset
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	display: block;
+	margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+}
+
+.form-group
+{
+	margin-bottom: 15px;
+}
+
+.parent-login .form-group label
+{
+	display: none;
+}
+
+label
+{
+	color: #333333;
+	font-family: "open_sans_semibold";
+	margin-bottom: 5px;
+	font-weight: bold;
+	cursor: default;
+}
+
+.parent-login .form-group .ls-login-bg-user
+{
+	background-image: url(../imagens/bg-user.jpg);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	padding-left: 35px;
+	font-size: 15px;
+}
+
+.input-lg
+{
+	height: 40px;
+	border-radius: 6px ;
+}
+
+.form-control
+{
+	display: block;
+	width: 100%;
+	color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+}
+
+body
+{
+	line-height: inherit;
+}
+
+.parent-login .ls-login-password
+{
+	margin-bottom: 0;
+}
+
+.parent-login .form-group .ls-login-bg-password
+{
+	background-image: url(../imagens/bg-password.jpg);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	padding-left: 35px;
+	font-size: 15px;
+}
+
+.parent-login .box-login a 
+{
+    color: #0077b6;
+}
+
+.parent-login .ls-login-forgot 
+{
+    font-size: 15px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    
+}
+
+.parent-login .btn-lg
+{
+	background-color: #023e8a;
+    border-color: #023e8a;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+}
+
+.btn 
+{
+    padding: 6px 12px;
+}
+
+.txt-center 
+{
+    text-align: center !important;
+}
+
+p 
+{
+    margin: 0 0 10px;
+}
+
+.eye
+{
+	position: absolute;
+	top: 212px;
+	right: 40px;
+}

@@ -16,25 +16,25 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   
 
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/log.css">
 
 </head>
 <body>
-  <?php
-    include 'nav.php';
-  ?>
-  <div class="parent-login">
-    <div class="well bg-white box-login"> <!--Coloca uma caixa ao redor do login-->
+ 
+
+  <section class="parent-login">
+    <section class="well bg-white box-login">
       <h1 class="ls-login-logo">Mercuryo S&Q</h1>
       <form  role="form">
         <fieldset>
-          <div class="form-group ls-login-user"> <!--Dá um espaço entre usuario e senha-->
+          <section class="form-group ls-login-user">
             <label for="userLogin">Usuário</label>
             <input class="form-control ls-login-bg-user input-lg" type="text" name="usuario" id="userLogin" aria-label="Usuário" placeholder="Usuário">
-          </div>
+          </section>
           <div class="form-group ls-login-password">
             <label for="userPassword">Senha</label>
-            <input class="form-control ls-login-bg-password input-lg " type="password" name="senha" id="UserPassword" aria-label="Senha" placeholder="Senha">
+            <input class="form-control ls-login-bg-password input-lg" type="password" name="password" id="UserPassword" placeholder="Senha">
+            <img src="imagens/eye.svg" alt="" class="eye">
           </div>
           <a href="#" class="ls-login-forgot">Esqueci minha senha</a>
           
@@ -44,11 +44,31 @@
           </p>
         </fieldset>
       </form>
-    </div>
-  </div>
+    </section>
+  </section>
+
+  <script>
+    var container = document.querySelector('div');
+    var input = document.querySelector('#UserPassword');
+    var icon = document.querySelector('img');
+
+    icon.addEventListener('click', function() 
+    {
+      container.classList.toggle('visible');
+      if(container.classList.contains('visible'))
+      {
+        icon.src = 'imagens/eye-off.svg';
+        input.type = 'text';
+      } else {
+        icon.src = 'imagens/eye.svg';
+        input.type = 'password';
+      }
+    });
+  </script>
+  <?php include 'nav.php';?>
   <br><br><br><br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br>
   <?php include 'rodape.html';?>
-  <script src="js/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+iframe
+{
+	margin-top: 60px; /*Espaço entre o mapa e o topo do brower*/
+	margin-left: 240px; /*Espaço entre o mapa e a esquerda do brower*/
+
+}
+
+h1
+{
+	font-family: cursive;
+	text-align: center;
+}

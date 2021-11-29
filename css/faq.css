@@ -1,0 +1,57 @@
+h1
+{
+	font-family: cursive;
+	text-align: center;
+}
+
+.Pergunta
+{
+	background-color: rgb(238, 238, 238); /*Cor de fundo das perguntas*/
+	color: rgb(68, 68, 68); /*Cor da fonte*/
+	cursor: pointer; /*Mostra pro usuario que dá pra clicar*/
+	padding: 18px; /*Espaço ao redor da pergunta*/
+	width: 60%; /*Largura da pergunta*/
+	border: none; /*Sem borda*/
+	outline: none; /*Sem borda em volta da pergunta*/
+	font-size: 1.3vw; /*Tamanho da fonte*/
+	transition: 0.4s; /*Tempo de transição*/
+	margin-top: 25px; /*Espaço entre o topo do brower e as perguntas*/
+	margin-left: 250px; /*Espaço entre o broweer esquerdo e as perguntas*/
+}
+
+.active, .Pergunta:hover
+{
+	background-color: rgb(204, 204, 204); /*Cor do fundo das perguntas quando passar o mouse em cima*/
+}
+
+.Pergunta:after
+{
+	content: '\002B';/*Sinal de mais*/
+	color: rgb(119, 119, 119); /*Cor da fonte*/
+	font-weight: bold; /*Em negrito*/
+	float: right; /*Lado a lado a direita*/
+	margin-left: 5px; /*Espaço entre o brower esquerdo e a pergunta*/
+}
+
+.active:after
+{
+	content: "\2212"; /*Sinal de menos*/
+}
+
+#Resposta
+{
+	padding: 0px 18px; /*Espaço ao redor da resposta*/
+	text-align: center; /*Texto centralizado*/
+	max-height: 0;
+	overflow: hidden; /*Resposta desaparece*/
+	transition: max-height 0.2s ease-out;
+	width: 45%; /*Largura da resposta*/
+	margin-left: 340px; /*Espaço entre o brower esquerdo e as respostas*/
+}
+
+#Resp
+{
+	font-family: cursive; /*Tipo de fonte*/
+	margin-bottom: 5px; /*Espaço entre a parte de baixo do brower e a resposta*/
+}
+

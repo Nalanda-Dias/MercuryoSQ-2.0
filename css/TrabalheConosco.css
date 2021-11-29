@@ -22,3 +22,14 @@ h3
     margin-left: -60px;
 }
 
+#formo {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.modal-content
+{
+    width: 980px;
+    height: 1600px;
+    margin-left: 180px;
+}

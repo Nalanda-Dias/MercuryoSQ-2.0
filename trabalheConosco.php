@@ -7,6 +7,7 @@
 		<!-- CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- jQuery livraria -->
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- JavaScript compilado-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,8 +16,7 @@
 
 	<script src="jquery.mask.min.js"></script>
 	<script src="js/trabalheConosco.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/TrabalheConosco.css">
-
+	<link rel="stylesheet" type="text/css" href="css/Trabalheconosco.css">
 </head>
 <body>
 	<?php
@@ -25,18 +25,21 @@
 
 		$Consulta_EstadoCivil = $conexao->query("select * from tbl_EstadoCivil");
 		$Consulta_Estado = $conexao->query("select * from tbl_Estado");
+
 	?>
 
-	<div class="container-fluid" id = "oi">
-		<h1>TRABALHE CONOSCO</h1>
-		<br>
-		<p>Se você deseja trabalhar conosco, você pode preencher o formulário e anexar o seu currículo abaixo: </p>
-		<br>
-		<form method="post" action="InserirPessoas.php" enctype =" multipart /form-data" name="TrabalheConosco" > <!--Abrindo o formulario-->
-			<h3 class="mt-4">Dados Pessoais</h3>
-			<br><br>
-			<div class="col-md-7 col-md-offset-3"> <!--Posiciona os rotulos e caixas de textos-->
-				<div class="form-row">
+	<div class="container-fluid " id="formo">
+		<div class="modal-content">
+        <h1>TRABALHE CONOSCO</h1>
+        <br>
+        <p>Se você deseja trabalhar conosco, você pode preencher o formulário e anexar o seu currículo abaixo: </p>
+        <br>
+
+        <form method="post" action="InserirPessoas.php" enctype="multipart/form-data"  name="TrabalheConosco">
+        	<h3 class="mt-4">Dados Pessoais</h3>
+        	<br><br>
+        	<div class="col-md-7 col-md-offset-3"> <!--Posiciona os rotulos e caixas de textos-->
+        		<div class="form-row">
 					<div class="form-group col-md-5"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
 						<label for="nome">Nome</label><br><!--Rotulo-->
 						<input type="text" name="txtnome" id="nome" class="form-control" placeholder="Digite seu nome" required><!--Caixa de texto-->
@@ -173,20 +176,22 @@
 				<h3 class="Titulo">Anexo do Currículo</h3>
 				<div class="form-row">
 					<div class="form-group col-md-11"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
-						<label for="curriculo">Currículo</label><br><!--Rotulo-->
-						<input type="file" accept="Curriculo/*" class="form-control" name="txtcurriculo" id="curriculo" required>
+						<input type="hidden" name="enviou" value="1">
+						<label for="curriculo">Currículo em PDF</label><br><!--Rotulo-->
+						<input type="file" accept="Curriculo/*" class="form-control" name="arquivo" id="curriculo" required>
 						<br><br>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-offset-4"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
-						<button type="submit" class="btn btn-lg btn-primary">Enviar informações </button>
-					</div>
+						<input type="submit" class="btn btn-lg btn-primary"value="Enviar informações" name="submit">
 				</div>
 			</div>
-		</form>
-	</div>
-
+        </form>
+    </div>
+    </div>
+    <br><br><br><br>
 </body>
 <?php include 'rodape.html';?>
 </html>
+

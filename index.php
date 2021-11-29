@@ -20,7 +20,7 @@
     <div class="fundo text-center"> 
     	<h1 class="display-4">Seja Bem-Vindo a Mercuryo SQ!</h1>
     	<p class="lead text-center">Mais do que linhas de código, transformamos ideias em novos negócios.</p>
-    	<a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a>
+    	<a class="btn btn-primary btn-lg" href="servicos.php" role="button">Saiba mais</a>
 	<br><br><br><br><br><br>
 	<?php include 'rodape.html';?>
 	<script src="js/efeitoescreve.js"></script>
