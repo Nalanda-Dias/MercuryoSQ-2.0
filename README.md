@@ -1,5 +1,5 @@
 # Mercuryo S&Q
-A empresa Mercuryo S&Q é fictícia, foi criada em 08 de maio de 2021, quando eu e meus colegas tivemos a idéia de entrar no ramo da tecnologia. 
+A empresa Mercuryo S&Q é fictícia, foi criada em 08 de maio de 2021, quando eu e meus colegas tivemos a idéia de entrar no ramo da tecnologia. Somos fodas! 
 
 ## Informações
     * Versão 2.0
