@@ -54,7 +54,7 @@
         <li><a href="sair.php" style="color: black; background-color:#ade8f4;"><span class="glyphicon glyphicon-log-out"> Sair</a></span></li>
       <?php } ?>
 
-        <label style=""><a href="#"><img src="imagens/USA.png"/></a></label>
+        <label style=""><a href="versaoIngles/index.php"><img src="imagens/USA.png"/></a></label>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

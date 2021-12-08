@@ -1,0 +1,40 @@
+h1
+{
+    font-family: cursive;
+    text-align: center;
+}
+
+p
+{
+    text-align: center;
+}
+
+h3
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.Titulo
+{
+    text-align: center;
+    font-weight: bold;
+    margin-left: -60px;
+}
+
+#formo {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.modal-content
+{
+    width: 980px;
+    height: 1600px;
+    margin-left: 180px;
+}
+
+#botao
+{
+    text-align: center;
+}
