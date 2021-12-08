@@ -28,16 +28,3 @@
       sign_in_btn.addEventListener("click", () => {
       container.classList.remove("sign-up-mode");
       });
-
-      $("#enviar").change(function(){
-        $.ajax({
-          url: "validausuario.php",
-          type: "POST",
-          data: {
-            usuario: $("#usuario").val(),
-            senha: $("#senha").val(),
-          }
-        }).done(function (resposta) {
-      $( "#msg" ).html(resposta);
-      });
-     })

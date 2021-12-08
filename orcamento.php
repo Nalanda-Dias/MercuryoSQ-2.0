@@ -15,8 +15,13 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
 	<script src="jquery.mask.min.js"></script>
-	<script src="js/trabalheConosco.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/Trabalheconosco.css">
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+  			$('#cpf').mask('000.000.000-00', {placeholder: "___.___.___-__"});
+		})
+	</script>
 </head>
 <body>
 	<?php
@@ -26,29 +31,29 @@
 
 		$Consulta_Serviço = $conexao->query("select Nome_Serviço from tbl_Serviço");
 	?>
-	<div class="container-fluid modal-content" style="height: 600px; width: 600px; margin-left:400px">
-		<h1>ORÇAMENTO</h1>
+	<div class="container-fluid">
+		<h1 style="text-align: center;">ORÇAMENTO</h1>
 		<br><br>
-		<form method="post" action="#" enctype="multipart/form-data" name="orcamento">
-			<div class="col-md-7 col-md-offset-3">
+		<form method="post" action="envioOrcamento.php" enctype="multipart/form-data" name="orcamento" style="margin-left:100px;">
+			<div class="col-md-5 col-md-offset-3" >
 			 	<div>
 			 		<label>Nome</label>
-			 		<input type="text" name="nome" class="form-control" required>
+			 		<input type="text" name="txtnome" class="form-control" required>
 			 	</div>
 			 	<br>
 			 	<div>
 			 		<label>CPF</label>
-			 		<input type="text" name="nome" class="form-control" required>
+			 		<input type="text" name="txtcpf" id="cpf" class="form-control" required>
 			 	</div>
 			 	<br>
 			 	<div>
 			 		<label>Email</label>
-			 		<input type="text" name="nome" class="form-control" required>
+			 		<input type="text" name="txtemail" class="form-control" required>
 			 	</div>
 			 	<br>
 			 	<div>
 			 		<label>Serviço</label>
-			 		<select class="form-control">
+			 		<select class="form-control" name="txtserviços">
 			 			<option value=" ">Selecione</option>
 			 			<?php while ($ListaServiço = $Consulta_Serviço->fetch(PDO::FETCH_ASSOC)){ ?>
 			 			<option value="<?php echo $ListaServiço['Nome_Serviço'];?>"><?php echo $ListaServiço['Nome_Serviço'] ?></option>
@@ -58,7 +63,7 @@
 			 	<br>
 			 	<div>
 			 		<label>Descrição da atividade</label>
-			 		<textarea class="form-control"></textarea>
+			 		<textarea class="form-control" name="txtdescricao"></textarea>
 			 	</div>
 			 	<br>
 			 	<div>

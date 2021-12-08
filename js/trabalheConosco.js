@@ -6,7 +6,7 @@ $(document).ready(function()
   $('#CEP').mask('00000-000');
   $('#DataEntrada').mask('00/00/0000', {placeholder: '__/__/____'});
   $('#Data_Saida').mask('00/00/0000', {placeholder: '__/__/____'});
-
+  $('#cpf').mask('000.000.000-00', {placeholder: "__/__/____"});
 })
 
 

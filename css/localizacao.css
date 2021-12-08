@@ -9,3 +9,13 @@ h1
 	font-family: cursive;
 	text-align: center;
 }
+
+/*Configuração para tela do celular*/
+@media only screen and (max-width: 800px)
+{
+	iframe
+	{
+		width: 400px;
+		margin-left: 50px; /*Espaço entre o mapa e a esquerda do brower*/
+	}
+}
