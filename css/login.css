@@ -11,6 +11,31 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
+img
+{
+  margin-top: -37px;
+  margin-left: 330px;
+}
+
+#senha
+{
+  margin-top: 5px;
+}
+
+.ls-login-forgot
+{
+  margin-top: -10px;
+  margin-left: -110px;
+}
+
+#voltar
+{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
 .container {
   position: relative;
   width: 100%;

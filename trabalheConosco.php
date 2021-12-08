@@ -20,6 +20,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		include 'conexao.php';
 		include 'nav.php';
 
@@ -29,7 +30,6 @@
 	?>
 
 	<div class="container-fluid " id="formo">
-		<div class="modal-content">
         <h1>TRABALHE CONOSCO</h1>
         <br>
         <p>Se você deseja trabalhar conosco, você pode preencher o formulário e anexar o seu currículo abaixo: </p>
@@ -56,7 +56,7 @@
 					</div>
 					<div class="form-group col-md-6 col-md-offset-0"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
 						<label for="sltEstadoCivil">Estado civil</label><br><!--Rotulo-->
-						<select class="form-control" name="sltEstadoCivil" required>
+						<select class="form-control" name="sltEstadoCivil" id="EstadoCivil" required>
 							<option value=" ">Selecione</option>
 							<?php while ($ListaEstadoCivil = $Consulta_EstadoCivil->fetch(PDO::FETCH_ASSOC)) { ?>
 								<option value="<?php echo $ListaEstadoCivil['Nome_Estado_Civil'];?>"><?php echo $ListaEstadoCivil['Nome_Estado_Civil'];?></option>
@@ -65,13 +65,15 @@
 					</div>
 				</div>
 				<div class="form-row">
-					<div class="form-group col-md-5"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
+					<div class="form-group col-md-7"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
 						<label for="email">E-mail</label><br><!--Rotulo-->
-						<input type="email" name="txtemail" id="email" class="form-control" placeholder="Digite seu email" required><!--Caixa de texto-->
+						<input type="email" name="txtemail" id="txtemail" class="form-control" placeholder="Digite seu email" required><!--Caixa de texto-->
+						<p id="msg" style="color:red; font-size: 12px;"></p>
 					</div>
-					<div class="form-group col-md-6"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
+					<div class="form-group col-md-4"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
 						<label for="celular">Celular</label><br><!--Rotulo-->
-						<input type="text" name="txtcelular" id="celular" class="form-control" placeholder="Digite o número do celular" required><!--Caixa de texto-->
+						<input type="text" name="txtcelular" id="celular" class="form-control" placeholder="Número do celular" required><!--Caixa de texto-->
+						<br>
 					</div>
 				</div>
 				<div class="form-row">
@@ -101,7 +103,7 @@
 					<div class="form-group col-md-4"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
 						<label for="cidade">Cidade</label><br><!--Rotulo-->
 						<input type="text" name="txtcidade" id="cidade" class="form-control" placeholder="Digite o nome da cidade" required><!--Caixa de texto-->
-						<br><br>
+						<br><br><br>
 					</div>
 				</div>
 				<h3 class="Titulo">Conhecimentos em Informática</h3>
@@ -184,13 +186,26 @@
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-offset-4"> <!--Formata determinado grupo de elementos e colocado lado a lado-->
-						<input type="submit" class="btn btn-lg btn-primary"value="Enviar informações" name="submit">
+						<input type="submit" id="botao" class="btn btn-lg btn-primary"value="Enviar informações" name="submit">
 				</div>
 			</div>
         </form>
     </div>
     </div>
     <br><br><br><br>
+    <script type="text/javascript">
+    	$("#txtemail").change(function(){
+        $.ajax({
+          url: "validaemail.php",
+          type: "POST",
+          data: {
+            txtemail: $("#txtemail").val(),
+          }
+        }).done(function (resposta) {
+      $( "#msg" ).html(resposta);
+      });
+     })
+    </script>
 </body>
 <?php include 'rodape.html';?>
 </html>

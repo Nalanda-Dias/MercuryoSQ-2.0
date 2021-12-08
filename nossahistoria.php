@@ -17,8 +17,10 @@
 	<link rel="stylesheet" type="text/css" href="css/Nossahistoria.css">
 </head>
 <body>
-	<?php 
-		include 'nav.php'; 
+	<?php
+		session_start();
+		include 'conexao.php';
+		include 'nav.php';
 	?>
 	<br>
 	<div class="container-fluid">

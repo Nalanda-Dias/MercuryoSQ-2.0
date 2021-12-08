@@ -15,6 +15,8 @@
 </head>
 <body>
 	<?php
+		session_start();
+		include 'conexao.php';
 		include 'nav.php';
 	?>
     <div class="fundo text-center"> 

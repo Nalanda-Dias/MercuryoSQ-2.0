@@ -1,7 +1,7 @@
 .col 
 {
 	width: 150px;
-	margin-left: 220px;
+	margin-left: 240px;
 	margin-top: 80px;
 }
 
@@ -9,4 +9,14 @@ h1
 {
 	text-align: center;
 	font-family: cursive;
+}
+ 
+@media (max-width: 570px) 
+{
+	.col 
+	{
+		width: 155px;
+		margin-left: 185px;
+		margin-top: 80px;
+	}
 }
